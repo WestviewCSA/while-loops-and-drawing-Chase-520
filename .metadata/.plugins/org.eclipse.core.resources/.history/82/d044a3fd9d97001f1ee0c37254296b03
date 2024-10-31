@@ -26,8 +26,7 @@ public class Runner2 extends JPanel{
 		
 		// top left
 		int counter1 = 1;
-		while(counter1<=h/space) {
-			
+
 
 			g2.drawLine(0, (counter1-1)*space,(counter1-1)*space, h);
 			counter1 += 1;
@@ -62,7 +61,7 @@ public class Runner2 extends JPanel{
 	
 	
 	
-	public static void main(String[] arg){
+	public static void main(String[] arg) {
 		Runner2 m = new Runner2();
 	}
 	
