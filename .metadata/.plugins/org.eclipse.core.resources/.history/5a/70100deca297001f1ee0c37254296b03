@@ -1,0 +1,17 @@
+package student_loan;
+
+import java.util.Scanner;
+
+public class p1 {
+
+	public static void printHeader() {
+		System.out.println("This is header ");
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		printHeader();
+		
+	}
+
+}

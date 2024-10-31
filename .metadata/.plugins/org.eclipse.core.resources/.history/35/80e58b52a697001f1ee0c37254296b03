@@ -1,0 +1,53 @@
+package student_loan;
+
+import java.util.Scanner;
+
+public class p1 {
+
+	
+	public static double getParams(String prompt, double min, double max) {
+		Scanner scan = new Scanner(System.in);
+		
+		// User input
+		System.out.println(prompt);
+		double numIn = scan.nextDouble();
+		while(true) {
+			if(numIn<=max && numIn>= min) {
+				return numIn;
+			}
+			else{
+				System.out.println(prompt);
+			}
+		}
+		
+	}
+	
+	public static void printHeader() {
+		System.out.println("Month   Interest   Balance");
+		System.out.println("-----   -------   -------");
+	}
+	
+	
+	public static void printMonthlyData() {
+		// params:int month, double principal, double interest, double loaned
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		
+		// User input
+		getParams("Please enter the monthly payment: ",0.0,1000.0);
+		getParams("Please enter the interest rate(percentage 2.6% = 2.6): ",0,100);
+		getParams("Please enter the duration of the loan, in years: ",0,10);
+		
+		System.out.println();
+		double interest_rate = scan.nextDouble()/100.0;
+		
+		System.out.println("Please enter the duration of the loan, in years: ");
+		int years = scan.nextInt();
+		printHeader();
+		
+	}
+
+}
