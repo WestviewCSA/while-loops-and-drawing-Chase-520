@@ -55,10 +55,10 @@ public class p1 {
 		// Indentation of the table
 		String mon = ""+month;
 		if(mon.length()==2) {
-			System.out.println(month+"      "+principal+"       "+interest+ "       "+balance);
+			System.out.println(month+"      "+principal+"       "+interest+ "      "+balance);
 		}
 		else {
-			System.out.println(month+"       "+principal+"       "+interest+ "       "+balance);
+			System.out.println(month+"       "+principal+"       "+interest+ "      "+balance);
 		}
 		
 		// the end of the function
@@ -127,7 +127,7 @@ public class p1 {
 		double inter = round_numbers(monthly_payment - princ);
 		balance += princ;
 		
-		System.out.println((int)(years*12)+"      "+princ+"       "+inter+ "       "+balance);
+		System.out.println((int)(years*12)+"      "+princ+"     "+inter+ "     "+balance);
 		
 		
 		// loop through months

@@ -127,7 +127,7 @@ public class p1 {
 		double inter = round_numbers(monthly_payment - princ);
 		balance += princ;
 		
-		System.out.println((int)(years*12)+"      "+princ+"       "+inter+ "       "+balance);
+		System.out.println((int)(years*12)+"      "+princ+"     "+inter+ "     "+balance);
 		
 		
 		// loop through months

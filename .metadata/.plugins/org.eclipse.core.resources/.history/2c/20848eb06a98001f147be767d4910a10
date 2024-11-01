@@ -51,17 +51,7 @@ public class p1 {
 		interest = round_numbers(interest);
 		balance = round_numbers(balance);
 		
-		
-		// Indentation of the table
-		String mon = ""+month;
-		if(mon.length()==2) {
-			System.out.println(month+"      "+principal+"       "+interest+ "       "+balance);
-		}
-		else {
-			System.out.println(month+"       "+principal+"       "+interest+ "       "+balance);
-		}
-		
-		// the end of the function
+		System.out.println(month+"      "+principal+"     "+interest+ "     "+balance);
 		return balance;
 		
 		
@@ -97,7 +87,8 @@ public class p1 {
 				correct_value = true;
 			}
 			catch(InputMismatchException e1) {
-				System.out.println("\n"+"*****invalid input type, please enter a new value again*****"+"\n");			}
+				System.out.println("invalid input type, please enter a new value again");
+			}
 		}
 		correct_value = false;
 
@@ -108,7 +99,8 @@ public class p1 {
 				correct_value = true;
 			}
 			catch(InputMismatchException e1) {
-				System.out.println("\n"+"*****invalid input type, please enter a new value again*****"+"\n");			}
+				System.out.println("invalid input type, please enter a new value again");
+			}
 		}
 		correct_value = false;
 
@@ -121,16 +113,15 @@ public class p1 {
 		double balance = 0;
 		double monthly_interest = interest_rate/(years*12);
 		
-		
-		// Initialize the calculation
+		// Initialization
 		double princ = round_numbers(monthly_payment/(1+monthly_interest));
 		double inter = round_numbers(monthly_payment - princ);
 		balance += princ;
 		
-		System.out.println((int)(years*12)+"      "+princ+"       "+inter+ "       "+balance);
+		System.out.println((int)(years*12)+"      "+princ+"     "+inter+ "     "+balance);
 		
 		
-		// loop through months
+		// loop
 		for(int i=(int)(years*12)-1;i>0;i--) {
 			balance = printMonthlyData(i,monthly_payment,monthly_interest,balance);
 		}
