@@ -16,11 +16,6 @@ public class p1 {
 
 	}
 	
-	public static String get_two_deci(double num) {
-		String res = String.format("%.2f",num);
-		return res;
-		
-	}
 	
 	public static double getParams(String prompt, double min, double max) {
 		Scanner scan = new Scanner(System.in);
@@ -52,10 +47,11 @@ public class p1 {
 		//System.out.println("Month   Principal   Interest   Balance");
 		
 		// round numbers
-	
 		principal = round_numbers(principal);
 		interest = round_numbers(interest);
 		balance = round_numbers(balance);
+		
+		
 		// Indentation of the table
 		String mon = ""+month;
 		if(mon.length()==2) {
@@ -116,6 +112,7 @@ public class p1 {
 		}
 		correct_value = false;
 
+		
 		
 		// Header
 		printHeader();

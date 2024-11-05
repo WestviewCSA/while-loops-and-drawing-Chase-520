@@ -52,17 +52,22 @@ public class p1 {
 		//System.out.println("Month   Principal   Interest   Balance");
 		
 		// round numbers
-	
+		/*
+		
 		principal = round_numbers(principal);
 		interest = round_numbers(interest);
 		balance = round_numbers(balance);
+		*/
+		String _principal = get_two_deci(principal);
+		String _interest = get_two_deci(interest);
+		String _balance = get_two_deci(balance);
 		// Indentation of the table
 		String mon = ""+month;
 		if(mon.length()==2) {
-			System.out.println(month+"      "+principal+"       "+interest+ "       "+balance);
+			System.out.println(month+"      "+_principal+"       "+_interest+ "       "+_balance);
 		}
 		else {
-			System.out.println(month+"       "+principal+"       "+interest+ "       "+balance);
+			System.out.println(month+"       "+_principal+"       "+_interest+ "       "+_balance);
 		}
 		
 		// the end of the function
