@@ -37,7 +37,15 @@ public class Dog {
 	// setters
 	
 	public void setName(String in) {
-		name = in;
+		if(in.length() > 1 && in.equals("Bella")) {
+			name = in;
+		}
+		else if(in == null){
+			System.out.println("Null input");;
+		}
+		else {
+			System.out.println("Invalid name");
+		}
 	}
 	
 	public void setBreed(String in){

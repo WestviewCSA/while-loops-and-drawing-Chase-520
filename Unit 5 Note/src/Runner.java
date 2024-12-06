@@ -8,8 +8,11 @@ public class Runner {
 		System.out.println(d1.getName());
 		System.out.println(d2.getName());
 		
+		System.out.println("###################################################");
 		
-		
+		// set
+		d1.setName("Bella");
+		d2.setName("Jacky");
 	}
 
 }
