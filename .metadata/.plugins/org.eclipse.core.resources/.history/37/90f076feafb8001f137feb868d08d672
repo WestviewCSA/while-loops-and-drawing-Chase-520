@@ -20,8 +20,7 @@ public class Person {
 	private int speedX = 3;						//speed in x-dir
 	private int speedY = 4;						//speed in y-dir
 	
-	private int infectTime = 5000; //5000 ms = 5s
-	private int deadTime = 10000;
+	private int time = 5000; //5000 ms = 5s
 	/*
 	 * make the person bounce around the screens
 	 */
@@ -32,17 +31,17 @@ public class Person {
 		this.x += speedX;
 		this.y += speedY;
 		
-		if(this.x<=0 || this.x >920) {
+		if(this.x<=0 || this.x >960) {
 			speedX *= -1;
 		}
-		if(this.y<=0||this.y>360) {
+		if(this.y<=0||this.y>400) {
 			speedY *= -1;
 		}
 		
 		//if sick, count down once reach 0 or less simulate healing or zombie
 		if(this.status==4) {
-			infectTime -= 20;
-			if(infectTime==0) {
+			time -= 20;
+			if(time==0) {
 				double ran = Math.random();
 				if(ran>=.5) {
 					this.status=1;
@@ -55,21 +54,6 @@ public class Person {
 					this.speedX=0;
 					this.speedY=0;
 				}
-			}		
-		}
-		
-		//if already dead
-		if(this.status==2) {
-			deadTime-=20;
-			if(deadTime==0) {
-				if(Math.random()>.5) {
-					this.status=3;
-				}
-				else {
-					this.status=5;
-				}
-				this.speedX=(int)(Math.random()*5);
-				this.speedY=(int)(Math.random()*5);
 			}
 		}
 	}
@@ -82,7 +66,7 @@ public class Person {
 		//infection
 		if(rMe.intersects(rYo)) {
 			//70% chance infection
-			if(Math.random()<=.10) {
+			if(Math.random()<=.30) {
 				if(this.status==4) {
 					// if sick
 					if(otherPerson.status==0) {
@@ -163,8 +147,8 @@ public class Person {
 		img = healthy;
 		
 		//alter these
-		x = (int)(Math.random()*960);
-		y = (int)(Math.random()*400);
+		x = (int)(Math.random()*400);
+		y = (int)(Math.random()*600);
 		
 		tx = AffineTransform.getTranslateInstance(0, 0);
 		

@@ -32,10 +32,10 @@ public class Person {
 		this.x += speedX;
 		this.y += speedY;
 		
-		if(this.x<=0 || this.x >920) {
+		if(this.x<=0 || this.x >960) {
 			speedX *= -1;
 		}
-		if(this.y<=0||this.y>360) {
+		if(this.y<=0||this.y>400) {
 			speedY *= -1;
 		}
 		
