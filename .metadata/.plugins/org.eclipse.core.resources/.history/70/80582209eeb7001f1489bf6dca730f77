@@ -20,7 +20,6 @@ public class Person {
 	private int speedX = 3;						//speed in x-dir
 	private int speedY = 4;						//speed in y-dir
 	
-	private int time = 5000; //5000 ms = 5s
 	/*
 	 * make the person bounce around the screens
 	 */
@@ -31,31 +30,13 @@ public class Person {
 		this.x += speedX;
 		this.y += speedY;
 		
-		if(this.x<=0 || this.x >960) {
+		if(this.x<=0 || this.x >=600) {
 			speedX *= -1;
 		}
-		if(this.y<=0||this.y>400) {
+		if(this.y<=0||this.y>=300) {
 			speedY *= -1;
 		}
 		
-		//if sick, count down once reach 0 or less simulate healing or zombie
-		if(this.status==4) {
-			time -= 20;
-			if(time==0) {
-				double ran = Math.random();
-				if(ran>=.5) {
-					this.status=1;
-				}
-				else if(ran>.1) {
-					this.status=5;
-				}
-				else {
-					this.status=2;
-					this.speedX=0;
-					this.speedY=0;
-				}
-			}
-		}
 	}
 	
 	public boolean colliding(Person otherPerson) {
@@ -66,7 +47,7 @@ public class Person {
 		//infection
 		if(rMe.intersects(rYo)) {
 			//70% chance infection
-			if(Math.random()<=.30) {
+			if(Math.random()<=.70) {
 				if(this.status==4) {
 					// if sick
 					if(otherPerson.status==0) {

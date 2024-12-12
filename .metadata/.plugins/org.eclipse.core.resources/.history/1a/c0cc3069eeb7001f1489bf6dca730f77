@@ -14,7 +14,7 @@ import javax.swing.Timer;
 
 public class SimGui extends JPanel implements ActionListener, MouseListener{
 	/* change these two numbers to alter the size of the JFrame */
-	private int screenWidth = 960;		 
+	private int screenWidth = 600;		 
 	private int screenHeight = 400;
 	private int numOfPeople = 200;
 	//Person p = new Person();

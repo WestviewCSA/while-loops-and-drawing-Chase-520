@@ -6,15 +6,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-
 public class SimGui extends JPanel implements ActionListener, MouseListener{
 	/* change these two numbers to alter the size of the JFrame */
-	private int screenWidth = 960;		 
+	private int screenWidth = 600;		 
 	private int screenHeight = 400;
 	private int numOfPeople = 200;
 	//Person p = new Person();
@@ -35,19 +33,9 @@ public class SimGui extends JPanel implements ActionListener, MouseListener{
 		  * use an enhanced for-loop to visit all the objects
 		  * and call their paint method
 		  */
-		
-		 System.out.println(Person.population);
-		 for(int i=0;i<Person.population-1;i++) {
-			 people[i].paint(g);
-			 
-		 }
-		 //nested loop
+		System.out.println(Person.population);
 		 for(int i=0;i<Person.population;i++) {
-			 for(int j=i+1;j<Person.population;j++) {
-				 if(people[i].colliding(people[j])) {
-					 System.out.println("Colliding");
-				 }
-			 }
+			 people[i].paint(g);
 		 }
 	}
 	
